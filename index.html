@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="hero-section" data-animate-on-scroll>
+      <img class="aurora-icon" alt="" src="./public/aurora.svg" />
+
+      <div class="frame-parent">
+        <div class="frame-group">
+          <div class="optimize-your-online-experienc-parent">
+            <div class="optimize-your-online-container">
+              <span> Optimize Your Online Experience with Our Advanced</span>
+              <span class="url-shortening"> URL Shortening</span>
+              <span> Solution</span>
+            </div>
+            <img class="frame-child" alt="" src="./public/vector-3.svg" />
+          </div>
+          <div class="personalize-your-shortened">
+            Personalize your shortened URLs to align with your brand identity.
+            Utilize custom slugs, branded links, and domain customization
+            options to reinforce your brand presence and enhance user
+            engagement.
+          </div>
+        </div>
+        <div class="button-parent">
+          <div class="button">
+            <div class="sample-cta">Sign Up</div>
+            <div class="magic-wand">
+              <img
+                class="magic-wand-icon"
+                alt=""
+                src="./public/magic-wand4.svg"
+              />
+            </div>
+          </div>
+          <div class="learn-more">Learn more</div>
+        </div>
+      </div>
+      <img class="hero-section-child" alt="" src="./public/group-33.svg" />
+
+      <div class="vector-parent">
+        <img class="frame-item" alt="" src="./public/vector-21.svg" />
+
+        <div class="frame-container">
+          <div class="frame-div">
+            <div class="link-2-parent">
+              <img class="link-2-icon" alt="" src="./public/link2.svg" />
+
+              <img class="link-2-icon1" alt="" src="./public/link2.svg" />
+
+              <img class="link-2-icon1" alt="" src="./public/link2.svg" />
+            </div>
+            <img class="frame-inner" alt="" src="./public/line-7.svg" />
+
+            <img class="link-2-icon3" alt="" src="./public/link2.svg" />
+          </div>
+          <div class="seamlessly-transform-your-container">
+            <span>Seamlessly transform your long URLs into </span>
+            <span>concise</span>
+            <span> and </span>
+            <span>shareable links</span>
+            <span> with just few clicks.</span>
+          </div>
+        </div>
+      </div>
+      <div class="header">
+        <div class="logo">
+          <img class="vector-icon" alt="" src="./public/vector2.svg" />
+
+          <img class="logo-child" alt="" src="./public/vector-22.svg" />
+
+          <div class="scissor">SCISSOR</div>
+        </div>
+        <div class="my-urls-parent">
+          <div class="my-urls">My URLs</div>
+          <div class="features-parent">
+            <div class="features">Features</div>
+            <img
+              class="chevron-down-icon"
+              alt=""
+              src="./public/chevrondown.svg"
+            />
+          </div>
+          <div class="pricing">Pricing</div>
+          <div class="pricing">Analytics</div>
+          <div class="pricing">FAQs</div>
+        </div>
+        <div class="log-in-parent">
+          <div class="features">Log in</div>
+          <div class="button1">
+            <div class="sample-cta">Try for free</div>
+            <div class="magic-wand">
+              <img
+                class="magic-wand-icon"
+                alt=""
+                src="./public/magic-wand5.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>
+</html>
